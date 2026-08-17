@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="rn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Indirimbo za Katoliki Burundi</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7f6;
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      background: #087f5b;
+      color: white;
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 15px;
+    }
+
+    /* MENU */
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #087f5b;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      background: #e8f5ef;
+    }
+
+    /* SEARCH */
+    .search {
+      max-width: 800px;
+      margin: 25px auto 15px;
+      padding: 0 15px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 10px 15px 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #087f5b;
+      margin-top: 30px;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .category {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .category .icon {
+      font-size: 35px;
+    }
+
+    .category h3 {
+      color: #087f5b;
+      margin: 10px 0;
+    }
+
+    .category p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .category button {
+      background: #087f5b;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    /* SONGS */
+    .songs {
+      margin-top: 20px;
+    }
+
+    .song {
+      background: white;
+      padding: 18px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.07);
+    }
+
+    .song h3 {
+      margin: 0 0 7px;
+      color: #087f5b;
+    }
+
+    .song p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .song-buttons {
+      margin-top: 12px;
+    }
+
+    .song-buttons a {
+      display: inline-block;
+      text-decoration: none;
+      background: #087f5b;
+      color: white;
+      padding: 8px 13px;
+      border-radius: 6px;
+      margin-right: 5px;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- UMUTWE -->
+  <header>
+    <h1>🎵 Indirimbo za Katoliki</h1>
+    <p>Indirimbo za Liturgie na Nduromana</p>
+    <p>Burundi 🇧🇮</p>
+  </header>
+
+
+  <!-- MENU -->
+  <nav>
+    <a href="#ahabanza">Ahabanza</a>
+    <a href="#liturgie">Liturgie</a>
+    <a href="#nduromana">Nduromana</a>
+    <a href="#abahimvyi">Abahimvyi</a>
+    <a href="#pdf">PDF</a>
+    <a href="#audio">Audio</a>
+  </nav>
+
+
+  <!-- SEARCH -->
+  <div class="search">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="🔎 Rondera indirimbo, umuhimvyi canke iciciro..."
+      onkeyup="searchSongs()"
+    >
+  </div>
+
+
+  <main class="container">
+
+    <!-- AHABANZA -->
+    <section id="ahabanza">
+      <h2 class="section-title">Murakaza neza</h2>
+
+      <p style="text-align:center;">
+        Murakaza neza ku rubuga rw'indirimbo za Katoliki.
+        Aha tuzobika no gusangira indirimbo zikoreshwa mu
+        Liturgie, Nduromana, Amakorali n'ibindi bikorwa vya Kiliziya.
+      </p>
+    </section>
+
+
+    <!-- LITURGIE -->
+    <section id="liturgie">
+
+      <h2 class="section-title">⛪ Liturgie</h2>
+
+      <div class="categories">
+
+        <div class="category">
+          <div class="icon">🎶</div>
+          <h3>Indirimbo zo muri Misa</h3>
+          <p>Indirimbo zikoreshwa mu Misa.</p>
+          <button onclick="showMessage('Misa')">
+            Raba indirimbo
+          </button>
+        </div>
+
+        <div class="category">
+          <div class="icon">🙏</div>
+          <h3>Avent</h3>
+          <p>Indirimbo z'igihe c'Avent.</p>
+          <button onclick="showMessage('Avent')">
+            Raba indirimbo
+          </button>
+        </div>
+
+        <div class="category">
+          <div class="icon">✝️</div>
+          <h3>Carême</h3>
+          <p>Indirimbo z'igihe c'igisibo.</p>
+          <button onclick="showMessage('Carême')">
+            Raba indirimbo
+          </button>
+        </div>
+
+        <div class="category">
+          <div class="icon">🌿</div>
+          <h3>Semaine Sainte</h3>
+          <p>Indirimbo z'Ikiyumweru Ceranda.</p>
+          <button onclick="showMessage('Semaine Sainte')">
+            Raba indirimbo
+          </button>
+        </div>
+
+        <div class="category">
+          <div class="icon">✝️</div>
+          <h3>Pâques</h3>
+          <p>Indirimbo z'Izuka rya Kristu.</p>
+          <button onclick="showMessage('Pâques')">
+            Raba indirimbo
+          </button>
+        </div>
+
+        <div class="category">
+          <div class="icon">🕊️</div>
+          <h3>Pentecôte</h3>
+          <p>Indirimbo za Roho Mutagatifu.</p>
+          <button onclick="showMessage('Pentecôte')">
+            Raba indirimbo
+          </button>
+        </div>
+
+        <div class="category">
+          <div class="icon">🌹</div>
+          <h3>Assomption</h3>
+          <p>Indirimbo z'Umusi mukuru w'Assomption.</p>
+          <button onclick="showMessage('Assomption')">
+            Raba indirimbo
+          </button>
+        </div>
+
+        <div class="category">
+          <div class="icon">⭐</div>
+          <h3>Abatagatifu</h3>
+          <p>Indirimbo z'abatagatifu.</p>
+          <button onclick="showMessage('Abatagatifu')">
+            Raba indirimbo
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- NDUROMANA -->
+    <section id="nduromana">
+
+      <h2 class="section-title">🙏 Nduromana</h2>
+
+      <div class="categories">
+
+        <div class="category">
+          <div class="icon">❤️</div>
+          <h3>Gushima Imana</h3>
+          <p>Indirimbo zo gushimira Imana.</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">🕊️</div>
+          <h3>Gusenga</h3>
+          <p>Indirimbo zo gusenga no kuzirikana.</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">✝️</div>
+          <h3>Kwihana</h3>
+          <p>Indirimbo zo gusaba imbabazi no kwihana.</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">🌹</div>
+          <h3>Bikira Mariya</h3>
+          <p>Indirimbo zo guhimbaza Bikira Mariya.</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">🎉</div>
+          <h3>Guhimbaza</h3>
+          <p>Indirimbo zo guhimbaza no gukorera Imana.</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">💒</div>
+          <h3>Ubukwe</h3>
+          <p>Indirimbo zikoreshwa mu birori vy'ubukwe.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- INDIRIMBO -->
+    <section id="indirimbo">
+
+      <h2 class="section-title">🎼 Indirimbo ziheruka gushirwa</h2>
+
+      <div class="songs" id="songList">
+
+        <div class="song">
+          <h3>Indirimbo ya mbere</h3>
+          <p><strong>Umuhimvyi:</strong> Izina ry'umuhimvyi</p>
+          <p><strong>Iciciro:</strong> Liturgie</p>
+
+          <div class="song-buttons">
+            <a href="#">📖 Soma</a>
+            <a href="#">📄 PDF</a>
+            <a href="#">🎵 Audio</a>
+          </div>
+        </div>
+
+
+        <div class="song">
+          <h3>Indirimbo ya kabiri</h3>
+          <p><strong>Umuhimvyi:</strong> Izina ry'umuhimvyi</p>
+          <p><strong>Iciciro:</strong> Nduromana</p>
+
+          <div class="song-buttons">
+            <a href="#">📖 Soma</a>
+            <a href="#">📄 PDF</a>
+            <a href="#">🎵 Audio</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABAHIMVYI -->
+    <section id="abahimvyi">
+
+      <h2 class="section-title">👤 Abahimvyi</h2>
+
+      <div class="category">
+        <p>
+          Aha tuzoshira amazina y'abahimvyi,
+          hanyuma umuntu ashobore kubona indirimbo zabo zose.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- PDF -->
+    <section id="pdf">
+
+      <h2 class="section-title">📄 PDF z'Indirimbo</h2>
+
+      <div class="category">
+        <p>
+          Aha ni ho tuzoshira ama PDF y'indirimbo kugira
+          abaririmvyi bashobore kuyasoma no kuyakoresha.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- AUDIO -->
+    <section id="audio">
+
+      <h2 class="section-title">🎵 Audio</h2>
+
+      <div class="category">
+        <p>
+          Aha tuzoshira amajwi y'indirimbo kugira
+          umuntu ashobore kuyumviriza kuri telefone canke ordinateur.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p><strong>Indirimbo za Katoliki</strong></p>
+
+    <p>
+      Liturgie • Nduromana • Amakorali • PDF • Audio
+    </p>
+
+    <p>© 2026 Indirimbo za Katoliki Burundi 🇧🇮</p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    function searchSongs() {
+
+      let input =
+        document.getElementById("searchInput").value.toLowerCase();
+
+      let songs =
+        document.querySelectorAll(".song");
+
+      songs.forEach(function(song) {
+
+        let text =
+          song.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          song.style.display = "block";
+        } else {
+          song.style.display = "none";
+        }
+
+      });
+
+    }
+
+
+    function showMessage(category) {
+
+      alert(
+        "Iki gice ca " +
+        category +
+        " kizoshiramwo indirimbo vuba."
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
